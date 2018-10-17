@@ -1,11 +1,53 @@
 Changelog
 =========
 
+Version table
+-------------
 
-Current master
+| Swift version | RxSwift version | Action version |
+| ------------- | --------------- | -------------- |
+| Swift 3.0     | v3.2.*             | v2.2.0            |
+| Swift 3.2     | v3.6.*             | v3.2.0            |
+| **Swift 4**   | **v4.0.0**      | **v3.4.0**     |
+| Swift 4.1    | **v4.2.0**      | **v3.6.0**     |
+| Swift 4.2    | **v4.3.1**      |   **v4.0**     |
+
 --------------
 
-- Nothing yet!
+4.0 
+--------------------
+
+- Cleanup public API [#120](https://github.com/RxSwiftCommunity/Action/issues/120)
+   - Remove unneccessary properties
+      - `workFactory`
+      - `_enabledIf`
+   - Rename properties to match Swift API design [guidelines](https://swift.org/documentation/api-design-guidelines/#strive-for-fluent-usage)
+      - `enabled` ~> `isEnabled`
+      - `executing` ~> `isExecuting`
+   - Deprecate renamed properties
+=======
+3.9.0
+-----
+- Fix Action Demo build failure
+- Added missing support for Swift 4.2 after 3.7.0
+
+
+3.8.0
+-----
+
+- Fix build failure on New Build System (default on Xcode 10) [#151](https://github.com/RxSwiftCommunity/Action/pull/151)
+
+3.7.0
+-----
+- Added full support for Swift 4.2
+- Added full support for RxSwift 4.3
+
+3.6.0
+-----
+- Updated `Semantic Versioning` to reflect what is actaully released both on `Pod`  and `Carthage`
+- Added full support for Swift 4.1
+- Added full support for RxSwift 4.2.0
+- UIRefreshControl support: binding to an action (or CocoaAction) starts the action itself and updates the control's refreshing status
 
 3.9.0
 -----
@@ -41,17 +83,6 @@ Current master
 - Added full support for Swift 4.0
 - Added full support for RxSwift 4.0.0
 - Preserved old behavior for `shareReplay(1)` api changes from `RxSwift`. [#110](https://github.com/RxSwiftCommunity/Action/pull/110)
-
-
-Version table
--------------
-
-| Swift version | RxSwift version | Action version |
-| ------------- | --------------- | -------------- |
-| Swift 3.0     | v3.2.*   	      | v2.2.0 		   |
-| Swift 3.2     | v3.6.*   	      | v3.2.0 		   |
-| **Swift 4**   | **v4.0.0**      | **v3.4.0**     |
-| Swift 4.1    | **v4.2.0**      | **v3.6.0**     |
 
 3.2.0
 -----
