@@ -16,7 +16,10 @@ Version table
 
 4.0 
 --------------------
-
+- Flatten error API [#158](https://github.com/RxSwiftCommunity/Action/pull/158)
+    - Removed  `ActionError`
+    - Added `errors: Observable<Error>` as underlying errors
+    - Added  `disabledErrors: Observable<AationDisabledError>` for better debugging when workFactory not send onCompleted()
 - Cleanup public API [#120](https://github.com/RxSwiftCommunity/Action/issues/120)
    - Remove unneccessary properties
       - `workFactory`
@@ -25,7 +28,7 @@ Version table
       - `enabled` ~> `isEnabled`
       - `executing` ~> `isExecuting`
    - Deprecate renamed properties
-=======
+
 3.9.0
 -----
 - Fix Action Demo build failure
